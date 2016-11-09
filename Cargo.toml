@@ -1,0 +1,9 @@
+[package]
+name = "tcpscanner"
+version = "0.1.0"
+authors = ["russ"]
+
+[dependencies]
+futures = "*"
+tokio-core = "*"
+mio = "*"
