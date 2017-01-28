@@ -2,10 +2,10 @@
 Need a tcp scanner template/proof-of-concept in Rust? Here you go!
 
 ## Usage
-To fire off a scan, just provide comma separated lists of IPs and ports. This will become more robust over time... 
+To fire off a scan, just provide comma separated lists of IPs and ports. This will become more robust over time...
 bear with me!
 ```rust
-./tcpscnanner 127.0.0.1,192.168.0.1,192.168.0.2 445,135,22
+./tcpscnanner 445,135,22 127.0.0.1,192.168.0.1,192.168.0.2
 ```
 
 ## Under The Hood

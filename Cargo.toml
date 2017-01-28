@@ -1,9 +1,16 @@
 [package]
 name = "tcpscanner"
-version = "0.1.0"
-authors = ["russ"]
+version = "0.1.1"
+authors = ["Russ <rmorris@infocyte.com>"]
+build = "build.rs"
+
+[build-dependencies]
+serde_codegen = "0.8"
 
 [dependencies]
 futures = "*"
 tokio-core = "*"
+tokio-timer = "*"
 mio = "*"
+serde = "0.8"
+serde_json = "0.8"
