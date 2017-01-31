@@ -1,5 +1,5 @@
 [package]
-name = "tcpscanner"
+name = "tcpscan-rs"
 version = "0.1.1"
 authors = ["Russ <rmorris@infocyte.com>"]
 build = "build.rs"
