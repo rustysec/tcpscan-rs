@@ -1,20 +1,26 @@
+#[macro_use]
+extern crate serde_derive;
+
 extern crate tokio_core;
 extern crate futures;
 extern crate mio;
 extern crate tokio_timer;
 extern crate serde_json;
 
-use std::env;
 use std::time::Duration;
 use std::vec::Vec;
 use std::collections::HashMap;
 use futures::{Future, Poll, Async};
-use tokio_core::reactor::{Core, Handle};
+use tokio_core::reactor::{Handle};
 use tokio_core::net::{TcpStream};
 use tokio_core::io::{IoFuture};
 use tokio_timer::{Timer,Sleep};
 
-include!(concat!(env!("OUT_DIR"), "/serde_types.rs"));
+#[derive(Serialize, Deserialize, Debug)]
+pub struct HostResult {
+    address: String,
+    ports: HashMap<String, String>
+}
 
 pub struct Port {
     port: String,
